@@ -18,13 +18,13 @@ const db = admin.firestore()
 
 app.get("/notifications", (req, res) => {
     db.collection('notifications').orderBy('createdAt').get().then(result => {
-        res.set("Access-Control-Allow-Origin", "*").status(200)
+        res.status(200)
             .json(result.docs.map(doc => {
                 let id = doc.id
                 return {...doc.data(), id}
             }));
     }).catch((error) => {
-        res.send(400).json(error);
+        res.status(400).json(error);
     })
 });
 
@@ -34,18 +34,18 @@ app.post('/add', (req, res) => {
         message: req.body.message,
         createdAt: req.body.createdAt
     }).then(() => {
-        res.json('Notification added');
+        res.status(200).json('Notification added');
     }).catch((error) => {
-        res.send(400).json(error);
+        res.status(400).json(error);
     })
 })
 
 app.delete('/notifications/:id', (req, res) => {
     let id = req.params.id 
     db.collection('notifications').doc(id).delete().then(() => {
-        res.json('Notification deleted')  
+        res.status(200).json('Notification deleted')  
     }).catch((error) => {
-        res.send(400).json(error);
+        res.status(400).json(error);
     })
 })
 
