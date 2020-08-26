@@ -1,0 +1,81 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  background-color: rosybrown;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  margin-top: 100px;
+}
+.main-form{
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  box-shadow: 0 0 5px gray;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 120px;
+  margin: 0 auto;
+}
+.input{
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.submit-btn{
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: #4f65a6;
+  margin-top: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+ .submit-btn:hover{
+   box-shadow: 0 0 8px gray;
+ }
+ .card{
+   padding: 10px;
+   margin: 10px;
+   box-shadow: 0 0 5px black;
+   border-radius: 5px;
+   width: 200px;
+   background-color: #c0b7aa;
+   position: relative;
+
+ }
+ .notifications-list{
+   display: flex;
+ }
+ .notif-title{
+   font-size: 20px;
+   font-weight: 500;
+ }
+ .delete-notification{
+   position: absolute;
+   background-color: wheat;
+   border-radius: 500em;
+   top: -10px;
+   right: -10px;
+   padding: 5px;
+   border: 1px solid gray;
+   cursor: pointer;
+ }
